@@ -1,0 +1,17 @@
+name: "Lint PR"
+
+permissions:
+  contents: read
+  pull-requests: write
+
+on:
+  # https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#workflow_dispatch
+  workflow_dispatch:
+  # https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#pull_request
+  pull_request:
+    types: [assigned, opened, synchronize, reopened, edited]
+    branches: [main]
+
+jobs:
+  workflow-1:
+    uses: willianantunes/reusable-workflows/.github/workflows/evaluate-pr-best-practices.yaml@main
