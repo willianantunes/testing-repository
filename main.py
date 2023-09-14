@@ -11,3 +11,5 @@ if __name__ == "__main__":
     print("Link")
     print("Midna")
     print("Sage")
+    print("Sanctuary...")
+    print("Twilight....")
